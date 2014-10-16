@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Perguntas>
+  
+  <Pergunta>
+    <Id>01</Id>
+    <Enunciado>Quem descobriu o Brasil?</Enunciado>
+    <Alternativa_A>Pedro Alvares Cabral</Alternativa_A>
+    <Alternativa_B>Rogerio Ceni</Alternativa_B>
+    <Alternativa_C>Vasco da Gama</Alternativa_C>
+    <Alternativa_D>Flamengo</Alternativa_D>
+    <Resposta>A</Resposta>
+  </Pergunta>
+
+  <Pergunta>
+    <Id>02</Id>
+    <Enunciado>Qual o promeiro mês do Ano?</Enunciado>
+    <Alternativa_A>Fevereiro</Alternativa_A>
+    <Alternativa_B>Janeiro</Alternativa_B>
+    <Alternativa_C>Dezembro</Alternativa_C>
+    <Alternativa_D>Outubro</Alternativa_D>
+    <Resposta>B</Resposta>
+  </Pergunta>
+
+  <Pergunta>
+    <Id>03</Id>
+    <Enunciado>Quantos meses tem um ano?</Enunciado>
+    <Alternativa_A>10</Alternativa_A>
+    <Alternativa_B>11</Alternativa_B>
+    <Alternativa_C>12</Alternativa_C>
+    <Alternativa_D>13</Alternativa_D>
+    <Resposta>C</Resposta>
+  </Pergunta>
+
+
+</Perguntas>

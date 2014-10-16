@@ -1,0 +1,9 @@
+﻿<xapCache source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\Bin\Release\LeitorRSSC_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="08/01/2014 14:50:06">
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\obj\Release\LeitorRSSC.dll" archivePath="LeitorRSSC.dll" lastWriteTime="08/01/2014 14:50:05" />
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\MeuXML.xml" archivePath="MeuXML.xml" lastWriteTime="03/11/2013 22:56:20" />
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\noticiaTecnologia.xml" archivePath="noticiaTecnologia.xml" lastWriteTime="14/11/2013 12:36:12" />
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="14/11/2013 10:25:04" />
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="07/01/2014 12:17:28" />
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\Background.png" archivePath="Background.png" lastWriteTime="14/11/2013 16:52:50" />
+  <file source="D:\Projetos\WindowsPhone\LeitorRSSC\LeitorRSSC\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="07/01/2014 12:28:05" />
+</xapCache>
