@@ -4,7 +4,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 @XStreamAlias("rss")
-public class rssNoticia {
+public class RssNoticia {
 
 	@XStreamAlias("version")
 	@XStreamAsAttribute
@@ -18,14 +18,14 @@ public class rssNoticia {
 		this.version = version;
 	}
 
-	public channel getchannel() {
+	public Channel getchannel() {
 		return channel;
 	}
 
-	public void setchannels(channel channel) {
+	public void setchannels(Channel channel) {
 		this.channel = channel;
 	}
 	
 	@XStreamAlias("channel")
-	public channel channel;
+	public Channel channel;
 }

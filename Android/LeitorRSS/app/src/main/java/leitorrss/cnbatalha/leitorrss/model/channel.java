@@ -7,7 +7,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import java.util.List;
 
 @XStreamAlias("channel")
-public class channel {
+public class Channel {
 
 	public String title;
 	
@@ -25,7 +25,7 @@ public class channel {
 	public Object image;
 
 	@XStreamImplicit(itemFieldName="item")
-	public List<item> items;
+	public List<Item> items;
 
 	public String getTitle() {
 		return title;
@@ -75,11 +75,11 @@ public class channel {
 		this.copyright = copyright;
 	}
 
-	public List<item> getItems() {
+	public List<Item> getItems() {
 		return items;
 	}
 
-	public void setItems(List<item> items) {
+	public void setItems(List<Item> items) {
 		this.items = items;
 	}
 

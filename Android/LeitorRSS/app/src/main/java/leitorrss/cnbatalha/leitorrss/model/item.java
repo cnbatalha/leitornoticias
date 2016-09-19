@@ -1,6 +1,6 @@
 package leitorrss.cnbatalha.leitorrss.model;
 
-public class item {
+public class Item {
 
 	public String title;
 	public String link;

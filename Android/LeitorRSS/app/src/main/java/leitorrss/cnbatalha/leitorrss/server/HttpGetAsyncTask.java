@@ -1,12 +1,11 @@
 package leitorrss.cnbatalha.leitorrss.server;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.leitorrss.model.cnbatalha.item;
-import com.leitorrss.model.cnbatalha.rssNoticia;
-import com.listview.cnbatalha.AdapterListView;
+
 import com.thoughtworks.xstream.XStream;
 
 import java.io.BufferedInputStream;
@@ -18,21 +17,24 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class HttpGetAsyncTask extends AsyncTask<String, Integer, rssNoticia> {
+import leitorrss.cnbatalha.leitorrss.adapter.AdapterListView;
+import leitorrss.cnbatalha.leitorrss.model.Item;
+import leitorrss.cnbatalha.leitorrss.model.RssNoticia;
+
+public class HttpGetAsyncTask extends AsyncTask<String, Integer, RssNoticia> {
 
 	
 	private ProgressDialog progressDlg;
-	
+	private Context context;
+
 	@Override
 	protected void onPreExecute() {
-		// TODO Auto-generated method stub
 		
 		try {
-					
-			progressDlg = ProgressDialog.show(LeitorRSS.context, "Download", "Atualizando Noticias");
+
+			progressDlg = ProgressDialog.show(context, "Download", "Atualizando Noticias");
 			
 		} catch (Exception e) {
-			// TODO: handle exception
 			 
 		}	
 			
@@ -40,13 +42,13 @@ public class HttpGetAsyncTask extends AsyncTask<String, Integer, rssNoticia> {
 	}	
 	
 	@Override
-	protected rssNoticia doInBackground(String... urls) {
+	protected RssNoticia doInBackground(String... urls) {
 	
 		// TODO Auto-generated method stub
 		String url = urls[0];
 		String data = "";
-		
-		rssNoticia rss= null;
+
+		RssNoticia rss= null;
 		
 		HttpURLConnection httpUrlConnection = null;
 
@@ -71,15 +73,15 @@ public class HttpGetAsyncTask extends AsyncTask<String, Integer, rssNoticia> {
 
 		// processando lista de noticias
 		XStream xstream = new XStream();
-		xstream.processAnnotations(rssNoticia.class);
+		xstream.processAnnotations(RssNoticia.class);
 		xstream.autodetectAnnotations(false);
 
 		try {
 
 			String xmlStream = data;
-			rss = (rssNoticia) xstream.fromXML(xmlStream);
+			rss = (RssNoticia) xstream.fromXML(xmlStream);
 
-			for (item i : rss.channel.items) {
+			for (Item i : rss.channel.items) {
 				while (i.title.contains("\t"))
 					i.title = i.title.replace("\t", "");
 
@@ -97,8 +99,7 @@ public class HttpGetAsyncTask extends AsyncTask<String, Integer, rssNoticia> {
 	}
 	
 	@Override
-	protected void onPostExecute(rssNoticia result) {
-		// TODO Auto-generated method stub	
+	protected void onPostExecute(RssNoticia result) {
 	
 		AdapterListView adp = new AdapterListView( NoticiasActivity.noticiaActivityContext, result.channel.items);
 
@@ -130,5 +131,9 @@ public class HttpGetAsyncTask extends AsyncTask<String, Integer, rssNoticia> {
 			}
 		}
 		return data.toString();
+	}
+
+	public void setContext(Context context) {
+		this.context = context;
 	}
 }
